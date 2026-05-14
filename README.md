@@ -73,15 +73,10 @@ AI 智能体（Claude Code 等）
 克隆或复制本目录，然后安装依赖：
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mcp-media-reader.git
-cd mcp-media-reader
-npm install
+git clone https://github.com/Bai-Black/Mcp_media-reader.git
 ```
-
-### 通过 npx 运行（无需克隆）
-
 ```bash
-npx mcp-media-reader
+npm install
 ```
 
 ## 配置
@@ -96,8 +91,8 @@ npx mcp-media-reader
       "args": ["/path/to/mcp-media-reader/server.js"],
       "env": {
         "MIMO_API_KEY": "your-mimo-api-key",
-        "MIMO_API_BASE": "https://api.xiaomimimo.com/v1",
-        "MIMO_MODEL": "mimo-v2.5"
+        "MIMO_API_BASE": "your-base-url",
+        "MIMO_MODEL": "mimo-v2.5/mimo-v2-omni"
       }
     }
   }

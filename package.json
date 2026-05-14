@@ -1,0 +1,32 @@
+{
+  "name": "mcp-media-reader",
+  "version": "1.0.0",
+  "description": "MCP server for audio/video understanding via MiMo API. Supports named sessions, autonomous refinement loops, and follow-up questions.",
+  "main": "server.js",
+  "type": "module",
+  "bin": {
+    "mcp-media-reader": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mcp",
+    "media",
+    "audio",
+    "video",
+    "understanding",
+    "mimo",
+    "xiaomi",
+    "multimodal"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

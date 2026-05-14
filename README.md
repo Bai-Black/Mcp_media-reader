@@ -68,30 +68,27 @@ AI 智能体（Claude Code 等）
 
 ## 安装
 
-### 作为 MCP 服务器（推荐）
+### 一、项目内（仅对当前项目生效)
 
-克隆或复制本目录，然后安装依赖：
+在项目内克隆或复制本目录，然后安装依赖：
 
 ```bash
 git clone https://github.com/Bai-Black/Mcp_media-reader.git
-```
-```bash
+cd ~/Mcp_media-reader（你的克隆地址）
 npm install
 ```
 
-## 配置
-
-在项目的 `.mcp.json` 文件（Claude Code 使用）或等效的 MCP 配置中添加：
+在项目根目录创建 `.mcp.json`：
 
 ```json
 {
   "mcpServers": {
     "media-reader": {
       "command": "node",
-      "args": ["/path/to/mcp-media-reader/server.js"],
+      "args": ["mcp-media-reader/server.js"],
       "env": {
         "MIMO_API_KEY": "your-mimo-api-key",
-        "MIMO_API_BASE": "your-base-url",
+        "MIMO_API_BASE": "your-mimo-base-url",
         "MIMO_MODEL": "mimo-v2.5/mimo-v2-omni"
       }
     }
@@ -99,9 +96,29 @@ npm install
 }
 ```
 
+### 二、全局（全局生效)
+
+在你存放mcp的地址克隆或复制本目录，然后安装依赖：
+
+```bash
+git clone https://github.com/Bai-Black/Mcp_media-reader.git
+cd ~/Mcp_media-reader（你的克隆地址）
+npm install
+```
+
+通过 CLI 命令添加：
+
+```bash
+claude mcp add -s user media-reader node ~/mcp-media-reader（你的克隆地址）/server.js
+```
+
+**重启Claude Code以生效**
+
 ### 首次使用：自动索取配置
 
 所有配置项均无默认值。如果未在 `env` 中预设，首次调用任何工具时，服务器会返回缺失项列表，要求智能体向用户索取。智能体随后调用 `configure` 工具完成配置。
+
+**注意：Base URL使用兼容 OpenAI 接口协议**
 
 ```
 用户：分析这个视频

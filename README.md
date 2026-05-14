@@ -66,7 +66,9 @@ AI 智能体（Claude Code 等）
 - **Node.js** >= 18
 - **小米 MiMo API Key** — 仅支持 `mimo-v2.5` 或 `mimo-v2-omni` 模型，在 [platform.xiaomimimo.com](https://platform.xiaomimimo.com/) 获取
 
-## 安装
+## 手动安装（以Claude Code为例）
+
+**安装后重启Claude Code以生效**
 
 ### 一、项目内（仅对当前项目生效)
 
@@ -111,8 +113,6 @@ npm install
 ```bash
 claude mcp add -s user media-reader node ~/mcp-media-reader（你的克隆地址）/server.js
 ```
-
-**重启Claude Code以生效**
 
 ### 首次使用：自动索取配置
 
